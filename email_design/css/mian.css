@@ -1,0 +1,174 @@
+@font-face {
+	font-family: FontAwesome;
+	src: url(../fonts/fontawesome-webfont.eot?v=4.5.0);
+	src: url(../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0) format('embedded-opentype'),url(../fonts/fontawesome-webfont.woff?v=4.5.0) format('woff');
+	font-weight: 400;
+	font-style: normal
+}
+
+
+::-webkit-scrollbar { display: none;}
+scrollbar { display: none;}
+
+* { margin: 0; padding: 0;}
+body { background: #fff; color: #82929F; font: 12px/27px Microsoft Sans Serif;}
+
+
+.clearfix:after { content: ''; display: block; visibility: hidden; height: 0; clear: both;}
+.clearfix { zoom: 1;}
+a { text-decoration: none; color: #A3ADBB; font: 12px/27px Microsoft Sans Serif;}
+ul,li { list-style: none;}
+i { font-style: normal;}
+input,textarea { border: none; outline: none; resize: none;}
+
+i.icon-paperclip:before { content: "\f0c6"; }
+
+#main { width: 1330px; height: 800px; background: #fff; margin: 30px auto; box-shadow: 0 0 5px rgba(0,0,0,.5); overflow: hidden;}
+
+/*#left-panel*/
+#left-panel { float: left; width: 542px; height: 100%; border-right: 1px solid #E2E5EA;  }
+
+/*.sidebar*/
+.sidebar { width: 198px; height: 100%; float: left; border-right: 1px solid #E2E5EA; background: linear-gradient(to top right, #fff , #F4F7F9)}
+.sidebar .sidebar-bottom { width: 198px; height: 728px; padding-top: 72px; position: relative; }
+.sidebar .new-message { height: 72px; width: 198px; /*padding-left: 30px; *//*background: #02C386 url(../img/new_message_icon.png) no-repeat 30px center;*/ background-color: #02C386; line-height: 72px; color: #fff; text-align: center; font-size: 16px;  cursor: pointer; transition: all .1s linear; position: absolute; z-index: 9999;}
+.sidebar .new-message .icon-edit { font-size: 24px; font-family: FontAwesome; color: #fff; margin-right: 10px; vertical-align: middle;}
+.sidebar .new-message .icon-edit:after { content: "\f044"; }
+.sidebar .new-message:hover { box-shadow: 0 0 80px rgba(0,0,0,.2); }
+.sidebar .new-message:active { box-shadow: 0 0 30px rgba(0,0,0,.3) inset; }
+
+.sidebar .folder-dir { padding: 20px 30px; }
+.sidebar .folder-dir ul { font-size: 16px; height: 260px;}
+.sidebar .folder-dir ul li { height: 40px; line-height: 40px; transition: all 0.2s;}
+.sidebar .folder-dir ul li:hover { color: #000; text-shadow: 0 0 1px rgba(0,0,0,.5); cursor: pointer;}
+.sidebar .folder-dir ul li span.num { float: right; color: #538FFF;}
+.sidebar .folder-dir ul li:last-child span.num { color: #82929F;}
+.sidebar .labels-box { padding-left: 30px;}
+.sidebar .labels-box .labels { color: #b8bbbf;}
+.sidebar .labels-box ul li { line-height: 40px; position: relative;}
+.sidebar .labels-box ul li a { display: inline-block; margin-left: 30px; font-size: 16px; transition: all 0.2s;}
+.sidebar .labels-box ul li a:hover { color: #000; text-shadow: 0 0 1px rgba(0,0,0,.5);}
+.sidebar .labels-box ul li b.circle { width: 16px; height: 16px; border-radius: 50%; background-color: #ccc; position: absolute; left: 0; top: 11px;}
+.sidebar .labels-box ul li b.circle i { width: 12px; height: 12px; border-radius: 50px; background-color: #fff; position: absolute; left: 2px; top: 2px;}
+.sidebar .labels-box ul li b.add-icon { width: 16px; height: 2px; background-color: #b1bcc6; position: absolute; left: 0; top: 20px;}
+.sidebar .labels-box ul li b.add-icon i { width: 2px; height: 16px; background-color: #b1bcc6; position: absolute; left: 7px; top: -7px;}
+
+.sidebar .labels-box ul li:nth-child(1) b.circle { background-color: #fd7c4e;}
+.sidebar .labels-box ul li:nth-child(2) b.circle { background-color: #c35bee;}
+.sidebar .labels-box ul li:nth-child(3) b.circle { background-color: #1fc58d;}
+
+.sidebar .sidebar-bottom .send { position: absolute; left: 30px; bottom: 30px; }
+.sidebar .sidebar-bottom .send > span { display: block; margin-bottom: 10px;}
+.sidebar .sidebar-bottom .send .progress { width: 138px; height: 2px; background: #d8dde7;}
+.sidebar .sidebar-bottom .send .progress > span { display: block; width: 70%; height: 2px; background: #538fff; box-shadow: 0 0 20px rgba(83,143,255,.8);}
+
+
+/*.mail-middle*/ 
+.mail-middle { width: 343px; height: 100%; float: left; background: #F4F7F9;}
+.mail-middle .mail-top { height: 71px; border-bottom: 1px solid #E2E5EA; padding: 0 60px; line-height: 71px; font-size: 14px;}
+.mail-middle .mail-top .sort { float: left;}
+.mail-middle .mail-top .sort .select { padding-right: 15px;}
+.mail-middle .mail-top .sort .select .select-box { display: inline-block; position: relative; padding-right: 15px;}
+.mail-middle .mail-top .sort .select .select-box .select-btn:after { content: ''; width: 0; height: 0; border-width: 4px 4px 0 4px; border-style: solid; border-color: #82929F transparent; position: absolute; top: 50%; right: 0; transition: transform 0.2s; transform: rotateZ(0deg);}
+.mail-middle .mail-top .active .select .select-box:hover .select-btn:after { transform: rotateZ(180deg);}
+.mail-middle .mail-top .sort .select .select-box  { display: inline-block; color: #5f717f; font-size: 16px; line-height: 20px; cursor: pointer; }
+.mail-middle .mail-top .sort .select .select-box ul.sort-list { visibility: hidden; border: 1px solid #E2E5EA; border-radius: 5px; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,.2); padding: 5px; position: absolute; left: 50%; bottom: 0; margin-left: -40px; margin-bottom: -55px; opacity: 0; transition: all .5s; z-index: 10;}
+.mail-middle .mail-top .sort .select .select-box ul.sort-list.active { visibility: visible; margin-bottom: -100px; opacity: 1;}
+.mail-middle .mail-top .sort .select .select-box ul.sort-list li { height: 25px; line-height: 25px; text-align: center; border-bottom: 1px solid #E2E5EA; cursor: pointer; transition: all .2s; }
+.mail-middle .mail-top .sort .select .select-box ul.sort-list li:last-child { border: none;}
+.mail-middle .mail-top .sort .select .select-box ul.sort-list li:hover { background-color: #F4F7F9; }
+.mail-middle .mail-top .sort .select .select-box ul.sort-list:before { content: ''; width: 0; height: 0; border-width: 0 6px 6px 6px; border-style: solid; border-color: #fff transparent; position: absolute; left: 50%; top: -6px; margin-left: -6px; }
+
+.mail-middle .mail-top .filter { float: right;}
+.mail-middle .mail-top .filter input { visibility: hidden;}
+.mail-middle .mail-top .filter label span { display: inline-block; width: 30px; height: 15px; border-radius: 30px; background-color: #ccc; margin-left: 10px; position: relative; cursor: pointer; vertical-align: middle; transition: all .2s;}
+.mail-middle .mail-top .filter label span b { display: block; width: 17px; height: 17px; border-radius: 50%; position:   absolute; left: -2px; top: -1px; background-color: #fff; transition: all .2s;}
+.mail-middle .mail-top .filter label span.active { background-color: #538FFF; transition: all .2s;}
+.mail-middle .mail-top .filter label span.active b { left: 18px; transition: all .2s;}
+
+
+/*邮件列表*/
+.mail-middle .mail-bottom { height: 728px; overflow-y: auto;}
+
+.mail-middle .mail-bottom .mail-list { height: 90px; padding: 35px 40px 35px 60px; border-bottom: 1px solid #E2E5EA; position: relative; overflow : hidden; transition: all .5s;}
+.mail-middle .mail-bottom .mail-list:hover { background-color: #fff; box-shadow: 0 0 30px rgba(0,0,0,.2);}
+.mail-middle .mail-bottom .mail-list .rand-color { display: block; width: 3px; height: 20px; background-color: #c76bef; box-shadow: 0 0 30px #c76bef,0 0 20px #c76bef; position: absolute;	top: 38px; right: 0;}
+.mail-middle .mail-bottom .mail-list:hover .rand-color {display: none;}
+.mail-middle .mail-bottom .mail-list .from-name { height: 22px; line-height: 22px; position: relative;}
+.mail-middle .mail-bottom .mail-list .from-name h1 { float: left; color: #262a2d; font-size: 18px; font-weight: normal;}
+.mail-middle .mail-bottom .mail-list .from-name h1.read { color: #5f717f;}
+.mail-middle .mail-bottom .mail-list .from-name span.time { float: right; color: #c2c7cd; font-size: 10px;}
+.mail-middle .mail-bottom .mail-list .from-name i.new-mail { position: absolute; left: -22px; top: 50%; margin-top: -4px;}
+.mail-middle .mail-bottom .mail-list .from-name i.new-mail:after{ display: block; content: ''; width: 10px; height: 10px; background-color: #538FFF; border-radius: 50%;}
+.mail-middle .mail-bottom .mail-list .mail-title { position: relative; }
+.mail-middle .mail-bottom .mail-list .mail-title h2 { color: #5f717f; font-size: 16px; font-weight: normal;}
+.mail-middle .mail-bottom .mail-list .mail-title i.icon-paperclip { position: absolute; left: -22px; top: 50%; margin-top: -14px; font-family: FontAwesome; font-size: 16px; color: #c2c7d2; }
+.mail-middle .mail-bottom .mail-list .mail-title i.icon-paperclip:before { content: "\f0c6"; }
+.mail-middle .mail-bottom .mail-list p.mail-summary { line-height: 22px; font-size: 14px; overflow : hidden; text-overflow: ellipsis; display: -webkit-box;  -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+
+
+.mail-middle .mail-bottom .loading { width: 200px; margin: 10px auto; text-align: center; overflow: hidden;}
+.mail-middle .mail-bottom .loading span { display: inline-block; width: 10px; height: 10px; background-color: #ccc; border-radius: 50%;}
+.mail-middle .mail-bottom .loading span:nth-child(1) { background-color: #c35bee; transform: translate(-140px,0); animation: loading 2s infinite;}
+.mail-middle .mail-bottom .loading span:nth-child(2) { background-color: #1fc58d; transform: translate(-130px,0); animation: loading 2s infinite; animation-delay: -0.5s;}
+.mail-middle .mail-bottom .loading span:nth-child(3) { background-color: #fd7c4e; transform: translate(-120px,0); animation: loading 2s infinite; animation-delay: 1s;}
+
+@keyframes loading {
+	0% { transform: translate(-140px,0); opacity: 0;}
+	50% { transform: translate(0,0); opacity: 1;}
+	100% { transform: translate(140px,0); opacity: 0;}
+}
+
+
+#right-panel { float: right; width: 787px;}
+#right-panel .top-bar { width: 787px; height: 71px; border-bottom: 1px solid #E2E5EA; overflow: hidden; position: relative;}
+#right-panel .top-bar .tools { float: left; border-right: 1px solid #E2E5EA; padding: 22px 30px; text-align: center; }
+#right-panel .top-bar .tools a { font-size: 22px; font-family: FontAwesome; display: inline-block; margin: 0 20px;}
+#right-panel .top-bar .tools .icon-trash:before { content: "\f1f8";}
+#right-panel .top-bar .tools .icon-reply:before { content: "\f112";}
+#right-panel .top-bar .tools .icon-reply-all:before { content: "\f122";}
+#right-panel .top-bar .tools .icon-next { width: 16px; height: 8px; background-color: #A3ADBB; position: relative; vertical-align: super; margin-right: 22px;}
+#right-panel .top-bar .tools .icon-next:after { content:''; width: 0; height: 0; border-width: 8px 0 8px 8px; border-style: solid; border-color: transparent transparent transparent #A3ADBB; position: absolute; left: 16px; top: -4px;}
+#right-panel .top-bar .tools .icon-more { width: 5px; height: 5px; margin: 0 36px; background-color: #A3ADBB; border-radius: 50%; position: relative; vertical-align: super;}
+#right-panel .top-bar .tools .icon-more:before { left: -10px;}
+#right-panel .top-bar .tools .icon-more:after { right: -10px;}
+.icon-more:before, .icon-more:after { content:''; width: 5px; height: 5px; background-color: #A3ADBB; border-radius: 50%; position: absolute;}
+#right-panel .top-bar .search { float: left; height: 100%;line-height:71px;  padding-left: 30px;} 
+#right-panel .top-bar .search i.icon-search { display: inline-block; height:71px; font-size: 22px; font-family: FontAwesome; }
+#right-panel .top-bar .search i.icon-search:after { content: "\f002"; }
+#right-panel .top-bar .search input { width: 130px; height: 30px; margin-left:10px ; background-color: transparent; border: none; outline: none; color: #A3ADBB; font-size: 20px; }
+#right-panel .top-bar .user-center { position: absolute; top: 0; right: 0; cursor: pointer;}
+#right-panel .top-bar .user-center img { float: left; width: 92px; height: 72px;}
+#right-panel .top-bar .user-center span { display: block; margin-left: 92px;  width: 72px; height: 72px; line-height: 72px; background-color: #b0a4fd; text-align: center; font-size: 20px; color: #fff;}
+#right-panel .container { padding: 50px 0 0 90px;}
+.container .content { padding: 0 170px 20px 60px; border-bottom: 1px solid #E2E5EA; overflow: hidden; position: relative;}
+.container .content .con-title{ position: relative;}
+.container .content .con-title .header-img{ width: 35px; height: 35px; border-radius: 50%; overflow: hidden; position: absolute; top: 35px; left: -60px;}
+.container .content .con-title .header-img img{ width: 35px; height: 35px;}
+.container .content .con-title .title-box .mail-from{ font-size: 14px; color: #A3ADBB;}
+.container .content .con-title .title-box .mail-from p.name{ display: inline-block; color: #666; margin-left: 10px;}
+.container .content .con-title .title-box .mail-from span.time{ float: right; margin-right: 20px;}
+.container .content .con-title .title-box h1.article-title{ width: 350px; line-height: 50px; font-size: 35px; font-weight: normal; color: #666;}
+
+.container .content .con-article{ line-height: 24px; font-size: 14px; color: #666; margin-top: 30px;}
+.container .content .arrow { position: absolute; top: 30px; right: 130px; font-family: FontAwesome; font-size: 22px;}
+.container .content .arrow .prev-arrow { margin-right: 40px;}
+.container .content .arrow .prev-arrow:after { content: "\f053"; cursor: pointer;}
+.container .content .arrow .next-arrow:after { content: "\f054"; cursor: pointer;}
+
+
+.container .fast-reply { height: 182px; margin-top: 30px; position: relative;}
+.container .fast-reply .fast-tools { float: left;}
+.container .fast-reply .fast-tools i { display: block; font-family: FontAwesome; font-size: 22px; margin-bottom: 10px; cursor: pointer;}
+.container .fast-reply .fast-tools i.icon-font:before { content: "\f031";}
+.container .fast-reply .fast-tools i.icon-link:before { content: "\f0c1";}
+.container .fast-reply .fast-tools i.icon-paperclip:before { content: "\f0c6";}
+#reply-message { margin-left: 60px;}
+#reply-message textarea { width: 570px; height: 120px; font: 14px/24px Microsoft Sans Serif; color: #666; box-shadow: 0 0 5px rgba(0,0,0, .2) inset; padding: 10px; box-sizing: border-box;}
+#reply-message input { width: 95px; height: 48px; background-color: #02C386; color: #fff; font-size: 18px; box-shadow: 0 0 10px rgba(2,195,134,.5); position: absolute; right: 67px; bottom: 0; cursor: pointer;}
+#reply-message input:active { box-shadow: 0 0 10px rgba(0,0,0,.5) inset;}
+
+
+
+
+

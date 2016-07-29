@@ -1,0 +1,51 @@
+
+body { margin: 0; padding: 0; height: 100%; font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif; background: url(../img/web_wechat_login_bg.jpg) no-repeat;-webkit-background-size: cover; background-size: cover; }
+.login-wrap { width: 300px; height: 420px; position: absolute; left: 50%; top: 50%; margin: -210px 0 0 -150px; -webkit-transform-style: preserve-3d;
+-moz-transform-style: preserve-3d;-ms-transform-style: preserve-3d;transform-style: preserve-3d; -webkit-perspective: 800px;-moz-perspective: 800px;-ms-perspective: 800px;perspective: 800px; -webkit-transform: rotateY(0deg);-moz-transform: rotateY(0deg);-ms-transform: rotateY(0deg);-o-transform: rotateY(0deg);transform: rotateY(0deg); -webkit-transition: all 0.5s cubic-bezier(1,-0.03, 0.6, 1.04);-moz-transition: all 0.5s cubic-bezier(1,-0.03, 0.6, 1.04);-ms-transition: all 0.5s cubic-bezier(1,-0.03, 0.6, 1.04);-o-transition: all 0.5s cubic-bezier(1,-0.03, 0.6, 1.04);transition: all 0.5s cubic-bezier(1,-0.03, 0.6, 1.04);}
+.login-wrap.back { -webkit-transform: rotateY(180deg);-moz-transform: rotateY(180deg);-ms-transform: rotateY(180deg);-o-transform: rotateY(180deg);transform: rotateY(180deg);}
+
+.login-window { width: 300px; height: 420px;position: absolute; left: 0; top: 0; -webkit-box-shadow: 0 0 8px rgba(0,0,0, .3);-moz-box-shadow: 0 0 8px rgba(0,0,0, .3);box-shadow: 0 0 8px rgba(0,0,0, .3); -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden;backface-visibility: hidden;}
+.login-window .login { height: 100%; background-color: #F5F5F5; text-align: center; padding: 20px; -webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.login-window .login .title { text-align: left;}
+.login-window .login .title h3 { color: #353535; font-size: 14px;}
+.login-window .login img.QR-code-img { width: 188px; height: 188px; margin: 50px auto;}
+.login-window .login p { color: #999; font-size: 14px;}
+.login-window .tips { position: absolute; left: 20px; top: -20px; opacity: 0;filter: alpha(opcity=0); -webkit-transition: all 1s;-moz-transition: all 1s;-ms-transition: all 1s;-o-transition: all 1s;transition: all 1s;}
+.login-window.login-back:hover .tips { left: 360px; opacity: 1;filter: alpha(opcity=100); -webkit-animation: showTips 1s; -o-animation: showTips 1s; animation: showTips 1s;}
+
+@-webkit-keyframes showTips {
+	0% { opacity: 0;filter: alpha(opcity=0); left: 20px;}
+	50% { opacity: 1;filter: alpha(opcity=100); left: 390px;}
+	100% { left: 360px;}
+}
+@-o-keyframes showTips {
+	0% { opacity: 0;filter: alpha(opcity=0); left: 20px;}
+	50% { opacity: 1;filter: alpha(opcity=100); left: 390px;}
+	100% { left: 360px;}
+}
+@-moz-keyframes showTips {
+	0% { opacity: 0;filter: alpha(opcity=0); left: 20px;}
+	50% { opacity: 1;filter: alpha(opcity=100); left: 390px;}
+	100% { left: 360px;}
+}
+@keyframes showTips {
+	0% { opacity: 0;filter: alpha(opcity=0); left: 20px;}
+	50% { opacity: 1;filter: alpha(opcity=100); left: 390px;}
+	100% { left: 360px;}
+}
+.login-window.login-front img.user-header { width: 94px; height: 94px; margin: 50px 0 30px;}
+.login-window.login-front span#userName { color: #999; display: block; font-size: 14px;}
+.login-window.login-front .login-form { position: relative; width: 210px; font-size: 12px; margin: 60px auto 40px;}
+.login-window.login-front button { background-color: #38C738; color: #fff; font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif; font-size: 14px; cursor: pointer; position: relative; z-index: 10; -webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+.login-window.login-front button:hover { background-color: #36BF36;}
+.login-window.login-front button:active { background-color: #2CB22C;}
+.login-window.login-front .login-form label { display: block; color: #999;}
+.login-window.login-front .login-form input { position: absolute; left: 0; top: 0; display: inline-block; padding: 5px; font-family: "Microsoft YaHei","微软雅黑",Arial,sans-serif; text-align: center; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -ms-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s;}
+.login-window.login-front .login-form input.show { margin-top: -40px;}
+.login-window.login-front .login-form input:focus{ -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.3);-moz-box-shadow: 0 0 30px rgba(0,0,0,0.3);box-shadow: 0 0 30px rgba(0,0,0,0.3);}
+.login-window.login-front .login-form input.warning { -webkit-box-shadow: 0 0 30px rgba(255,0,0,0.5);-moz-box-shadow: 0 0 30px rgba(255,0,0,0.5);box-shadow: 0 0 30px rgba(255,0,0,0.5);}
+.login-window.login-front button, .login-window.login-front .login-form input { width: 210px; height: 40px; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;}
+.login-window.login-front a.replace-user { display: inline-block; color: #406493;}
+
+.login-front { -webkit-transform: rotateY(0deg);-moz-transform: rotateY(0deg);-ms-transform: rotateY(0deg);-o-transform: rotateY(0deg);transform: rotateY(0deg);}
+.login-back { -webkit-transform: rotateY(180deg);-moz-transform: rotateY(180deg);-ms-transform: rotateY(180deg);-o-transform: rotateY(180deg);transform: rotateY(180deg);}
